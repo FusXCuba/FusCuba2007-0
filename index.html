@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusCuba Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="messenger">
+        <div class="sidebar">
+            <div class="header">
+                <h1>FusCuba</h1>
+                <button class="btn-new">+</button>
+            </div>
+            <div class="contacts">
+                <div class="contact active">Контакт 1</div>
+                <div class="contact">Контакт 2</div>
+                <div class="contact">Контакт 3</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="chat-header">
+                <h2>Контакт 1</h2>
+            </div>
+            <div class="messages">
+                <div class="message received">
+                    <p>Привет! 👋</p>
+                </div>
+                <div class="message sent">
+                    <p>Привет! Как дела? 😊</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Напишите сообщение...">
+                <button class="btn-send" onclick="sendMessage()">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
