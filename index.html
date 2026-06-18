@@ -10,27 +10,36 @@
     <div class="messenger">
         <div class="sidebar">
             <div class="header">
-                <h1>FusCuba</h1>
-                <button class="btn-new">+</button>
+                <div class="user-profile">
+                    <img id="current-avatar" src="" alt="Аватар" class="avatar">
+                    <div>
+                        <h1 id="current-name">FusCuba</h1>
+                        <small id="current-email"></small>
+                    </div>
+                </div>
+                <button class="btn-new" onclick="newChat()">+</button>
             </div>
-            <div class="contacts">
-                <div class="contact active">Контакт 1</div>
-                <div class="contact">Контакт 2</div>
-                <div class="contact">Контакт 3</div>
+            <div class="contacts" id="contacts-list">
+                <!-- Контакты заполняются из localStorage -->
+            </div>
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="logout()">Выход</button>
             </div>
         </div>
 
         <div class="chat">
             <div class="chat-header">
-                <h2>Контакт 1</h2>
+                <div class="chat-header-content">
+                    <img id="contact-avatar" src="" alt="Аватар" class="avatar-small">
+                    <div>
+                        <h2 id="contact-name">Контакт 1</h2>
+                        <small id="contact-status">В сети</small>
+                    </div>
+                </div>
+                <button class="btn-options">⋮</button>
             </div>
-            <div class="messages">
-                <div class="message received">
-                    <p>Привет! 👋</p>
-                </div>
-                <div class="message sent">
-                    <p>Привет! Как дела? 😊</p>
-                </div>
+            <div class="messages" id="messages-list">
+                <!-- Сообщения заполняются динамически -->
             </div>
             <div class="input-area">
                 <input type="text" id="message-input" placeholder="Напишите сообщение...">
@@ -39,6 +48,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="messenger.js"></script>
 </body>
 </html>
